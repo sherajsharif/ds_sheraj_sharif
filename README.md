@@ -1,64 +1,58 @@
 Trader Behavior vs Market Sentiment Analysis
 
-This project studies how trading behavior (activity, volume, and profitability) changes under different market sentiment conditions—Fear, Neutral, Greed, and Extreme Greed.
+This project examines how trading activity, volume, and profit change under different market sentiment levels: Fear, Neutral, Greed, and Extreme Greed.
 
-The analysis uses two datasets:
+Datasets
 
-historical_data.csv — Raw trade data (211,224 trades)
+historical_data.csv – 211,224 raw trades
 
-fear_greed_index.csv —  Fear–Greed Index
+fear_greed_index.csv – Daily market sentiment values
 
-📌 Objective
+Objective
 
-To explore the relationship between trader behavior and market sentiment, identify hidden trends, and understand whether traders act differently under Fear vs Greed.
+To understand how trader behavior reacts to market sentiment and identify patterns between:
 
-This helps in:
+Trading activity
 
-Smarter trading strategies
+Trading volume
 
-Risk management decisions
+Profit/Loss
 
-Better market analysis
+Sentiment levels
 
-📂 Data Workflow
-1. Data Loading
+Workflow
 
-Loaded both CSV files using Pandas in Google Colab.
+Load both datasets
 
-2. Timestamp Conversion
+Convert timestamps and extract date
 
-Converted timestamps into readable datetime and extracted date (sentiment is daily).
+Aggregate daily trading metrics
 
-3. Daily Aggregation of Trading Data
+Merge trading data with sentiment data
 
-From 211,224 raw trades, we computed:
+Perform exploratory data analysis and create visualizations
 
-Total trades per day
+Visualizations
+1. Correlation Heatmap
 
-Total trading volume (USD)
+2. Sentiment vs Total Trades
 
-Average execution price
+3. Sentiment vs Profit/Loss
 
-Total Profit/Loss
+4. Volume vs Profit/Loss
 
-The dataset contained trades for 7 unique dates.
+5. Fear vs Greed Bar Chart
 
-4. Merge with Sentiment Data
+Key Findings
 
-Merged daily trading metrics with the Fear–Greed Index using the date column.
+Trading activity is highest during Fear
 
-5. EDA (Exploratory Data Analysis)
+Profit is highest when sentiment is low
 
-Analyzed relationships between sentiment, trading volume, profit, and activity.
+Greedy or calm markets show reduced trading activity
 
-📈 Key Insights
+Higher trading volume is strongly linked to higher profit
 
-Trader activity spikes during Fear — markets are volatile and active.
+Conclusion
 
-Profit is highest when sentiment is low — fear brings opportunities.
-
-Greedy/Calm markets show lower trading activity — fewer price movements.
-
-Volume strongly correlates with profit — more trading = more returns.
-
-
+Traders are more active and more profitable during fearful market conditions, while trading slows down during greedy or stable markets. Market sentiment has a clear influence on how traders behave.
